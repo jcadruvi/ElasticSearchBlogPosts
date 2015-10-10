@@ -1,0 +1,44 @@
+curl -XPOST "http://localhost:9200/users/user/1" -d'
+{
+    "name": "John Doe",
+    "email": "john.doe@yahoo.com",
+    "department": "Engineering",
+    "is_manager": true,
+    "is_director": false
+}
+
+curl -XPOST "http://localhost:9200/users/user/2" -d'
+{
+    "name": "Jane Doe",
+    "email": "jane.doe@yahoo.com",
+    "department": "Sales",
+    "is_manager": false,
+    "is_director": true
+}
+
+curl -XPOST "http://localhost:9200/users/user/3" -d'
+{
+    "name": "Dan Doe",
+    "email": "dan.doe@yahoo.com",
+    "department": "Engineering",
+    "is_manager": false,
+    "is_director": true
+}
+
+curl -XPOST "http://localhost:9200/users/user/4" -d'
+{
+    "name": "Fred Smith",
+    "email": "fred.smith@yahoo.com",
+    "department": "Engineering",
+    "is_manager": false,
+    "is_director": false
+}
+
+curl -XPOST "http://localhost:9200/users/user/5" -d'
+{
+    "name": "Daniel Smith",
+    "email": "daniel.smith@yahoo.com",
+    "department": "Sales",
+    "is_manager": false,
+    "is_director": false
+}
