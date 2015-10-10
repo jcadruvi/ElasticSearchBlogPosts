@@ -1,0 +1,24 @@
+curl -XPUT "http://localhost:9200/users" -d'
+{
+    "mappings": {
+        "user": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "department": {
+                    "type": "string"
+                },
+                "is_manager": {
+                    "type": "boolean"
+                },
+                "is_director": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
