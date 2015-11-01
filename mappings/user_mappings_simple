@@ -1,4 +1,4 @@
-curl -XPUT "http://localhost:9200/users/user" -d'
+curl -XPUT "http://localhost:9200/users" -d'
 {
     "mappings": {
         "user": {
