@@ -1,0 +1,13 @@
+curl -XPOST "http://localhost:9200/users/user/_search" -d'
+{
+    "query": {
+        "filtered": {
+            "query": {
+                "term": { "name": "doe" }
+            },
+            "filter": {
+                "term": { "is_manager": true }
+            }
+        }
+    }
+}
