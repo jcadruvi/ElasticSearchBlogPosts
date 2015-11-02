@@ -1,0 +1,6 @@
+curl -XPOST "http://localhost:9200/users/user/_search" -d'
+{
+    "query": {
+        "term": { "name": "doe" }
+    }
+}
