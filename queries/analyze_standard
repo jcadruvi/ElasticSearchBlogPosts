@@ -1,0 +1,1 @@
+curl -XGET "http://localhost:9200/_analyze?tokenizer=standard&text=You're my 2nd 'favorite'" -d
