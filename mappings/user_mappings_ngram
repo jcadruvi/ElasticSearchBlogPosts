@@ -1,0 +1,51 @@
+curl -XPUT "http://localhost:9200/users" -d'
+{
+    "settings": {
+        "analysis": {
+            "tokenizer": {
+                "ngram_tokenizer": {
+                    "type": "nGram",
+                    "min_gram": 2,
+                    "max_gram": 20
+                },
+                "edge_ngram_tokenizer" : {
+                    "type" : "edgeNGram",
+                    "min_gram" : "2",
+                    "max_gram" : "20"
+                }
+            },
+            "analyzer": {
+                "ngram_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "ngram_tokenizer"
+                },
+                "edge_ngram_analyzer" : {
+                    "type": "custom",
+                    "tokenizer" : "edge_ngram_tokenizer"
+                }
+            }
+        }
+    },
+    "mappings": {
+        "user": {
+            "properties": {
+                "name": {
+                    "type": "string",
+                     "analyzer": "ngram_analyzer"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "department": {
+                    "type": "string"
+                },
+                "is_manager": {
+                    "type": "boolean"
+                },
+                "is_director": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
