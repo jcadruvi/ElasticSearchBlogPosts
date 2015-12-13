@@ -18,12 +18,12 @@ curl -XPUT "http://localhost:9200/users" -d'
                 "ngram_analyzer": {
                     "type": "custom",
                     "tokenizer": "standard",
-                    "filter": ["ngram_filter"]
+                    "filter": ["ngram_filter", "lowercase"]
                 },
                 "edge_ngram_analyzer" : {
                     "type": "custom",
                     "tokenizer" : "standard",
-                    "filter": ["edge_ngram_filter"]
+                    "filter": ["edge_ngram_filter", "lowercase"]
                 }
             }
         }
